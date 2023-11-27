@@ -53,9 +53,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
 
-}
+/* body {
+
+} */
 section {
 	margin-block: 6em;
 }
@@ -127,10 +128,14 @@ header {
 	position: absolute;
 }
 #banner .arrow_left {
-	left: 10px;
+	text-decoration: none;
+	position: relative;
+	right: 800px;
 }
 #banner .arrow_right {
-	right: 10px;
+	text-decoration: none;
+	position: relative;
+	left: 800px;
 }
 /* Gestion des points du carrousel */
 .dots {
@@ -172,7 +177,7 @@ header {
 	flex:1;
 }
 #about-us li {
-	background: url("./images/tricolor-icon.png") no-repeat left top;
+	background: url("../images/tricolor-icon.png") no-repeat left top;
 	font-size: 16px;
 	line-height: 26px;
 	padding-left:2em;
@@ -258,7 +263,7 @@ header {
 
 #contact h3 {
 	margin-top: 0;
-	background: url("./images/tricolor-icon.png") no-repeat left top;
+	background: url("../images/tricolor-icon.png") no-repeat left top;
 	padding-left:1.5em;
 	width: 200px;
 }
