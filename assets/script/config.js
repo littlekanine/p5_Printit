@@ -1,18 +1,22 @@
 const slides = [
 	{
-		"image":"slide1.jpg",
-		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
+		"image":"./assets/images/slideshow/slide1.jpg",
+		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>",
+		"class":"dot dot_selected"
 	},
 	{
-		"image":"slide2.jpg",
-		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
+		"image":"./assets/images/slideshow/slide2.jpg",
+		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>",
+		"class":"dot dot_selected"
 	},
 	{
-		"image":"slide3.jpg",
-		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
+		"image":"./assets/images/slideshow/slide3.jpg",
+		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>",
+		"class":"dot dot_selected"
 	},
 	{
-		"image":"slide4.png",
-		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
+		"image":"./assets/images/slideshow/slide4.png",
+		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>",
+		"class":"dot dot_selected"
 	}
 ]
