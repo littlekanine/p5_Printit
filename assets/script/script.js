@@ -1,57 +1,63 @@
+// Const
+let currentIndex = 0;
+let bulletIndex = 0;
+let bullets = [];
 
-let currentIndex = 0
-let bulletIndex = 0
-let tagLine = document.getElementById("tagLine")
-let bulletContainer = document.getElementById("bulletContainer")
+let tagLine = document.getElementById("tagLine");
+let bulletContainer = document.getElementById("bulletContainer");
+let arrowRight = document.getElementById("slideRight");
+let arrowLeft = document.getElementById("slideLeft");
 
-// déclare une variable appelée bullets et l'initialise avec un tableau vide ([]).
-let bullets = [] 
+// Event listeners
+arrowLeft.addEventListener("click" ,  slideLeft );
+arrowRight.addEventListener("click" ,  slideRight );
 
-slides.forEach((slide, index) => {
-    const bullet = document.createElement("div")
-    bullet.classList.add("dot")
-    bulletContainer.appendChild(bullet)
-    bullets.push(bullet)
-})
+// Initialization
+initBulletPoints();
+updateCarrouselFromCurrenIndex();
 
-bullets[currentIndex].classList.add('dot_selected')
+// Functions
+function initBulletPoints() {
+    slides.forEach((slide, index) => {
+        const bullet = document.createElement("div");
+        bullet.classList.add("dot");
+        bulletContainer.appendChild(bullet);
+        bullets.push(bullet);
+    })
+    
+    bullets[currentIndex].classList.add('dot_selected');
+} 
 
-function slideRight () {
+function updateCarrouselFromCurrenIndex() {
+    bannerImg.src = slides[currentIndex].image;
+    tagLine.innerHTML = slides[currentIndex].tagLine;
+}
+
+function slideRight() {
     currentIndex ++
     if (currentIndex >= slides.length) {
-        currentIndex =0
+        currentIndex = 0;
     }
-    bannerImg.src = slides[currentIndex].image 
 
-    tagLine.innerHTML = slides[currentIndex].tagLine
-
-    updateBullet ()
+    updateCarrouselFromCurrenIndex();
+    updateBullet();
 }
 
-function slideLeft () {
+function slideLeft() {
     currentIndex --
     if (currentIndex < 0 ) {
-        currentIndex = slides.length - 1
+        currentIndex = slides.length - 1;
     }
-    bannerImg.src = slides[currentIndex].image
 
-    tagLine.innerHTML = slides[currentIndex].tagLine
-
-    updateBullet ()
+    updateCarrouselFromCurrenIndex();
+    updateBullet();
 }
 
-function updateBullet () {
+function updateBullet() {
     bullets.forEach((bullet, index) => {
       bullet.classList.remove('dot_selected');
       if (index === currentIndex) {
         bullet.classList.add('dot_selected');
       }
     })
-
 }
-
-let arrowLeft = document.getElementById("slideLeft") 
-    arrowLeft.addEventListener("click" ,  slideLeft )
-
-let arrowRight = document.getElementById("slideRight")
-    arrowRight.addEventListener("click" ,  slideRight )
