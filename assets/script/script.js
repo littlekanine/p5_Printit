@@ -1,6 +1,5 @@
 // Const
 let currentIndex = 0;
-let bulletIndex = 0;
 let bullets = [];
 
 let tagLine = document.getElementById("tagLine");
